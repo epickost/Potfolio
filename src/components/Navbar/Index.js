@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../../styles/Navbar/Navbar.css";
 import { FaBars } from 'react-icons/fa';
-import { Link } from "react-router-dom";
 // import { faGithub } from '@fortawesome/free-brands-svg-icons';
 const Navbar=()=>
 {
@@ -22,7 +21,7 @@ const Navbar=()=>
           <div className="navbar_mobile" >
              <FaBars onClick={mobile_hamburger} size='30px'/>
           </div>
-          {open==true ?
+          {open===true ?
              (<div className="nav_mob_items">
                <a className="nav_mob_links" onClick={mobile_hamburger} href={'/about'}>About</a>
                <a className="nav_mob_links" onClick={mobile_hamburger} href={"#workexp"}>Experience</a>

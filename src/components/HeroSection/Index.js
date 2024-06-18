@@ -2,7 +2,7 @@ import React from "react";
 import "../../styles/HeroSection.css";
 import Typewriter from 'typewriter-effect';
 import srcvideo from '../../assets/ALL-1.mp4';
-import { FaLinkedinIn,FaGithub,faEnvelope, FaEnvelope} from "react-icons/fa";
+import { FaLinkedinIn,FaGithub,FaEnvelope} from "react-icons/fa";
 const HeroSection=()=>
 {
    return <div className="hero_section" >

@@ -1,9 +1,7 @@
-import {React,useState} from "react";
-import {skills,web_projects} from "../../data/constant";
+import {React} from "react";
+import {web_projects} from "../../data/constant";
 import "../../styles/Skills.css";
-import { InView } from 'react-in-viewport';
 import { useInView } from 'react-intersection-observer';
-import EachProject from "./EachProject";
  import { useNavigate } from 'react-router-dom';
 
 const Skills = () => {

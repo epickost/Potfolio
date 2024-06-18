@@ -1,6 +1,5 @@
 
 import youro3 from '../assets/Projectpics/youro-3.jpg';
-import dataa from  '../assets/Projectpics/data-analyze.jpg';
 import sales from '../assets/Projectpics/sales.jpg';
  
 
@@ -8,7 +7,6 @@ import sales from '../assets/Projectpics/sales.jpg';
 export const web_projects= [
     {
       projectname:"youro.",
-      projectname: "youro.",
       gitlink:'https://github.com/sricharan18/youro-frontend',
       imglink1:youro3,
       description:"A TeleHealth platform",

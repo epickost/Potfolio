@@ -1,9 +1,8 @@
-import {React,useState,useEffect} from "react";
-import { useParams } from 'react-router-dom';
+import {React,useEffect} from "react";
 import { useLocation } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import "../../styles/EachProject.css";
-import { FaLinkedinIn,FaGithub,faEnvelope, FaEnvelope} from "react-icons/fa";
+import {FaGithub} from "react-icons/fa";
 const EachProject=()=>
 {
 
