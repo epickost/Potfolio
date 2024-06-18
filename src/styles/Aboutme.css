@@ -1,0 +1,217 @@
+ @import "../App.css";
+
+.aboutme
+{
+  display: flex;
+}
+
+.second-layer
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.about-me
+{
+  margin: 1%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  @media screen  and (max-width:960px)
+  {
+     flex-direction: column;
+  }
+  
+  
+}
+
+.about-me-1
+{
+  margin: 1%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-around;
+
+  @media screen  and (max-width:960px)
+  {
+     flex-direction: column;
+  }
+}
+
+.mee
+{
+  font-size: 3.5rem;
+   color: rgb(43, 43, 175);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+  font-family: cursive;
+}
+
+.description
+{
+  margin: 2%;
+}
+
+.skills
+{
+   padding: 40px;
+}
+.skill
+{ 
+  /* border: 1.5px solid black;  */
+  border-radius: 5px;
+  padding: 2px;
+  margin: 0 3px; 
+  display: inline-block; 
+}
+
+/* .blue
+{
+  color: blue;
+  font-weight: bold ;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.brown
+{
+  color: brown;
+  font-weight: bold ; 
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+} */
+.blue {
+  color: #3498db;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.orange {
+  color: rgb(230, 106, 34);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.purple {
+  color: #9b59b6;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.red {
+  color: #e74c3c;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+@keyframes animate {
+  0% {
+    background-position: left 0px top 0px;
+  }
+  40% {
+    background-position: left 800px top 0px;
+  }
+}
+
+
+/* .about-img
+{
+  display: flex;
+  /* flex: 1% 1% 50%; */
+  /* justify-content: center;
+   width: 100%;
+   /* @media screen  and (max-width:960px)
+  { 
+    border-radius: 10px;
+    justify-content: none;
+  } */
+  /* position: relative;
+  /* padding: 0px 30px; */
+
+/* .about-img img
+{
+  height: 100%;
+  width: 70%;
+  border-radius: 10px;
+   @media screen  and (max-width:960px)
+  { 
+     height: 340px;
+     width: 90%; 
+  }
+
+}  */
+
+.about-img {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 30px;
+  box-sizing: border-box; 
+}
+.about-img img {
+  max-width: 100%; 
+  height: auto;
+  width: 70%; 
+  border-radius: 10px;
+  box-sizing: border-box; 
+ box-shadow: 2px 2px 2px 2px rgb(148, 141, 141); 
+  @media screen and (max-width: 960px) {
+    width: 50%; 
+    height: auto; 
+    border-radius: 20px; 
+  }
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.education
+{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  @media screen and (max-width: 960px)
+   {
+     flex-direction: column;
+   }
+}
+
+.masters
+{
+  
+  /* margin-left: 30%; */
+  padding: 20px;
+  /* border: 0.5px solid black; */
+  border-radius: 15px;
+  /* margin-bottom: 20%; */
+  @media screen and (max-width: 960px)
+   {
+      margin: 0% 5%;
+       /* width: 50%; */
+   }
+}
+
+hr 
+{
+  width: 0%;
+  margin: -2%;
+   @media screen and (max-width: 960px)
+   {
+     display: none;
+   } 
+}
+
+.bachelors
+{
+  /* margin-right: 30%;
+   margin-top: 15%; 
+  
+  /* margin-bottom: 5%; */
+  /* border: 0.5px solid black; */
+  border-radius: 15px;
+  padding: 20px;
+  @media screen and (max-width: 960px)
+   {
+     margin: 2% 5%;
+   }
+
+}

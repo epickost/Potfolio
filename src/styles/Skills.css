@@ -1,0 +1,149 @@
+
+
+@import "../App.css";
+
+.skill_container
+{
+  font-size: 1.2rem;
+  background-color: white;
+  /* color: aliceblue; */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  @media screen and (max-width:960px)
+  {
+    font-size: 1rem;
+  }
+}
+
+.skills_card
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 2px;
+  align-items: center;
+  justify-content: center;
+ 
+  @media screen and (max-width:960px)
+  {
+    flex-direction: column;
+  }
+  /* animation-name: fadeInOut, moveLeft300px, bounce;
+  animation-duration: 2.5s, 5s, 1s;
+  animation-iteration-count: 2, 1, 5; */
+}
+
+.skills_details
+{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  width: 42%;
+  height: 65vh;
+  border-radius: 20px;
+  border: 0.02px solid gray;
+  padding: 20px;
+  margin: 15px;
+  top: 0;
+  transition: top ease 0.3s;
+  /* box-shadow: 5px 5px 5px 5px rgb(148, 141, 141);   */
+  /* box-shadow: 10px 10px rgb(216 214 214 / 22%); */
+  /* box-shadow: 5px 5px 5px 5px rgb(148, 141, 141); */
+  /* animation: loading-fade 1s 1 linear both; */
+   @media screen and (max-width:960px)
+  {
+    width: 80%;
+    height: 40vh;
+  }
+
+  @media screen and (max-width:760px)
+  {
+    width: 80%;
+    height: 40vh;
+  }
+}
+.skills_details:hover
+{
+   top: -10px;
+   background-color: rgb(155, 153, 153);
+   /* border: 0.02px solid white; */
+   border: none;
+   box-shadow: 5px 5px 5px 5px rgb(148, 141, 141);  
+}
+.All_Skills
+{
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* flex-direction: row; */
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.skills_section
+{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.skill_l_r
+{
+  position: relative;
+  animation: mymove 2.2s;
+  animation-fill-mode: forwards;
+}
+.skill_l_r h1
+{ 
+  padding: 10px;
+  /* border: 0.5px solid black; */
+  animation-timing-function: ease;
+  border-radius: 20px;
+}
+
+.skill_r_l
+{
+  position: relative;
+  animation: mymove1 2.2s;
+  animation-fill-mode: forwards; 
+}
+
+.skill_r_l h1
+{ 
+  padding: 10px;
+  /* border: 0.5px solid black; */
+  animation-timing-function: ease;
+  border-radius: 20px;
+}
+
+@media screen and (min-width: 960px )
+{
+  @keyframes mymove {
+  from {left: 0px;}
+  to {left: 10px;}
+}
+@keyframes mymove1 {
+  from {right: 0px;}
+  to {right:10px;}
+}  
+}
+
+
+
+
+/* .skills_section p
+{
+  color: white;
+}
+.skills_details h1
+{
+} */
+
+
+/* -------- */

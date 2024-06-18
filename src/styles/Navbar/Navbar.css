@@ -1,0 +1,130 @@
+
+@import "../../App.css";
+/* @import { darkTheme } from '../../utils/Themes.js'; */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav
+{
+  height: 80px;
+  width: 100%;
+  background-color: var(--dark_bg);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1rem;
+  position: sticky;
+  top:0;
+  z-index: 10;
+  @media screen and (max-width: 960px) 
+  {
+	transition: 0.8s all ease;
+  }
+}
+
+.nav_container
+{
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  width: 100%;
+  padding: 0 24px;
+  max-width: 1200px;
+}
+
+.nav_items
+{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 32px;
+  padding: 0 6px;
+  list-style: none;
+  @media screen and (max-width: 768px) 
+{
+	display: none;
+  }
+}
+
+.nav_links
+{
+  color: var(--dark_text_primary);
+  font-weight: 820;
+  padding: 25px 25px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+  color: var(--dark_primary);
+  }
+}
+
+.nav_button
+{
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   padding: 0 10px;
+}
+
+.navbar_mobile
+{
+  display: none;
+  @media screen and (max-width: 768px)
+ {
+	display: block;
+        position: absolute;
+        top: 0;
+    	left: 0;
+        padding: 20px;
+    	/* transform: translate(-100%, 60%); */
+    	font-size: 1.5rem;
+    	cursor: pointer;
+            
+  }
+}
+
+.nav_mob_items
+{
+  /* background-color: var(--dark_bg); */
+  color:black;
+  /* height: 100px; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  list-style: none; 
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 100%;
+  padding: 12px 40px 24px 40px;
+  transform: translateX(0);
+  /* opacity: 100%; */
+  z-index: 1;
+  opacity: 1;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.nav_mob_links
+{
+  color: black;
+  font-weight: 820;
+  padding: 5px 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+  transition: all 0.1s ease-in-out;
+  color: var(--dark_primary);
+ 
+  }
+}

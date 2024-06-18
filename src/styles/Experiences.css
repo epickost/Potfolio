@@ -1,0 +1,110 @@
+
+@import "../App.css";
+.div_work
+{
+  color: black;
+  align-items: center;
+  display: flex;
+  margin-top: 3%;
+  flex-direction: column;
+   @media screen and (max-width:960px)
+ {
+   padding: 90px 0px ;
+   margin-top: 250px;
+ }  
+
+}
+
+.all_items
+{
+  width: 95%;
+  color: white;
+  display: flex;
+  margin: 20px;
+  position: relative;
+  border-radius: 30px;
+  /* flex-direction: row; */
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: top ease 0.8s;
+  top:0;
+  box-shadow: 5px 5px 5px 5px rgb(148, 141, 141);
+  /* animation: loading-fade 1s 1 linear both; */
+  @media screen and (max-width:960px)
+ {
+    flex-direction: column;
+ }
+}
+
+.all_items:hover
+{
+  top: -10px;
+  /* box-shadow: 0 4x 10px rgba(0, 0, 0, 0.3); */
+  box-shadow: 5px 5px 5px 5px rgb(148, 141, 141);
+}
+
+.work_ex_items
+{
+  width:80%;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding: 10px 60px;
+  align-items: center;
+  @media screen and (max-width:960px)
+ {
+    padding: 30px 20px;
+    flex-direction: column;
+ }
+}
+.job-jd
+{
+   /* display: none; */
+   @media screen and (max-width:960px)
+ {
+   display: none;
+ } 
+}
+
+.exp-h3
+{
+  color: white;
+  border-bottom: 2px solid #f0f0f0;
+  @media screen and (max-width: 960px)
+ {
+   border-bottom: none;   
+  }
+}
+.work_ex_details
+{
+   display: flex;
+   flex-direction: column;
+   padding: 80px;
+   gap: 15px;
+   @media screen and (max-width:960px)
+ {
+    padding:20px;
+ }
+}
+
+.work_ex_details h1
+{
+  margin: 0; 
+  padding: 0;
+}
+.work_ex_details h2
+{
+  margin: 0; 
+  padding: 0;
+}
+.work_ex_details h3
+{
+  margin: 0; 
+  padding: 0;
+}
+.work_ex_details h4
+{
+  margin: 0; 
+  padding: 0;
+}

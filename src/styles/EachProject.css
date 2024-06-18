@@ -1,0 +1,61 @@
+ @import "../App.css";
+
+.borders
+{
+  margin:2%;
+  padding:2%;
+  display: flex;
+  flex-direction: column;
+}
+.headers
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style for the headings */
+h3 {
+  font-family: Arial, sans-serif;
+  color: black;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+/* Style for the unordered list */
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+/* Style for the list items */
+ul li {
+  font-family: 'Georgia', serif;
+  color: black;
+  margin-bottom: 5px;
+}
+
+/* Style for bold text within the list items */
+ul li strong {
+  color: #000;
+}
+
+/* Style for paragraphs */
+p {
+  font-family: 'Georgia', serif;
+  color: black;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Container for the markdown content */
+.markdown-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
