@@ -26,7 +26,7 @@ const HeroSection=()=>
       </div>
       </h1>
       </div>
-       <p>I'm a CS grad with 2 years in Software Engineering, specializing in React.js, HTML, CSS, and Spring Boot for responsive web app development. I bring adaptability and a full-stack approach, eager to tackle diverse projects.</p>
+       <p>I'm a CS grad with 2 years of experience in Software Engineering, specializing in React.js, HTML, CSS, and Spring Boot for responsive web app development. I bring adaptability and a full-stack approach, eager to tackle diverse projects.</p>
        {/* <p>I am a CS grad with 2 years as a Software Engineer, skilled in React.js, HTML, CSS, and backend development using Spring Boot. 
           Experienced in creating responsive web apps. Adaptable, enthusiastic, and a full-stack developer ready for diverse projects.</p> */}
        <div className="links">
