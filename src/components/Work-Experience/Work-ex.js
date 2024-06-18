@@ -9,7 +9,7 @@ const WorkExp=()=>
            {experiences.map((item,index) => 
                <div key={index} className="all_items" style={{backgroundColor:"black"}}>
                <div className="work_ex_items">
-                <div><img src={(item.img)} height={195} width={195}/> </div>
+                <div><img src={(item.img)} alt="work-exp" height={195} width={195}/> </div>
                 <div className="work_ex_details">
                  <div><h1 style={{color:"white"}}>{item.company}</h1></div>
                  <div><h2>{item.role}</h2></div>

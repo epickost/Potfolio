@@ -24,7 +24,7 @@ const About=()=>
 
      <div className="about-me">
       <div className="about-img">
-        <img src={require('../../assets/pp1.jpg')} ></img>
+        <img src={require('../../assets/pp1.jpg')}  alt="A picture"></img>
       </div>
      <hr/>
      <div className="description">
@@ -47,7 +47,7 @@ const About=()=>
 
          <div className="about-me-1">
            <div className="vid"> 
-         <video loop autoPlay muted className="video-mp4">
+         <video loop autoPlay muted className="video-mp4" alt="Autoplay">
            <source  src={srcvideo} type="video/mp4">
             </source>
          </video>
@@ -70,7 +70,7 @@ const About=()=>
 
          <div className="about-me">
       <div className="about-img">
-        <img src={require('../../assets/About-pictues/nyc.jpg')} ></img>
+        <img src={require('../../assets/About-pictues/nyc.jpg')} alt="A picture" ></img>
       </div>
      <hr/>
      <div className="description">
@@ -133,7 +133,7 @@ const About=()=>
         <div className="about-me-1">
           <div className="vid"> 
           <video loop autoPlay muted className="video-mp4">
-           <source  src={srcvideo1} type="video/mp4">
+           <source  src={srcvideo1} type="video/mp4" alt="autoplay-video">
             </source>
          </video>
          </div>
