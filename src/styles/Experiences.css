@@ -108,3 +108,63 @@
   margin: 0; 
   padding: 0;
 }
+
+.job-jd h3 {
+  border-bottom: none !important;
+  text-decoration: none !important;
+}
+
+.s2-logo {
+  max-width: 200px;
+  max-height: 120px;
+  object-fit: contain;
+  background: transparent;
+}
+
+.float-logo {
+  animation: riverFloat 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* subtle variation so all logos don't move exactly same */
+.all_items:nth-child(odd) .float-logo {
+  animation-duration: 7.5s;
+}
+.all_items:nth-child(even) .float-logo {
+  animation-duration: 6.2s;
+}
+
+@keyframes riverFloat {
+  0%   { transform: translateY(0px) translateX(0px); }
+  25%  { transform: translateY(-6px) translateX(3px); }
+  50%  { transform: translateY(0px) translateX(6px); }
+  75%  { transform: translateY(6px) translateX(3px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .float-logo { animation: none; }
+}
+
+.logo-wrapper {
+  width: 180px;
+  height: 180px;
+  background: white;        /* keeps logo clean */
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-logo {
+  max-width: 140px;
+  max-height: 140px;
+  object-fit: contain;
+}
+
+
+
+
+
+

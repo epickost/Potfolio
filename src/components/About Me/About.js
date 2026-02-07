@@ -111,10 +111,7 @@ const About=()=>
   <span class="purple"> Confluence </span>, 
   <span class="red"> Jenkins </span>, 
   <span class="blue"> Code Analysis </span>, 
-  <span class="orange"> AWS </span> (
-  <span class="purple"> EC2 </span>, 
-  <span class="red"> Lambda </span>, 
-  <span class="blue"> S3 </span>), and 
+  <span class="orange"> AWS </span>,
   <span class="orange"> Asana </span>.
 </p>
 
@@ -154,3 +151,4 @@ const About=()=>
 }
 
 export default About;
+

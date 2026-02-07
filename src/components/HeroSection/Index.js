@@ -26,13 +26,13 @@ const HeroSection=()=>
       </div>
       </h1>
       </div>
-       <p>I'm a CS grad with 2 years of experience in Software Engineering, specializing in React.js, HTML, CSS, and Spring Boot for responsive web app development. I bring adaptability and a full-stack approach, eager to tackle diverse projects.</p>
-       {/* <p>I am a CS grad with 2 years as a Software Engineer, skilled in React.js, HTML, CSS, and backend development using Spring Boot. 
-          Experienced in creating responsive web apps. Adaptable, enthusiastic, and a full-stack developer ready for diverse projects.</p> */}
+      <p>
+        Software Engineer with 3+ years of experience building scalable full-stack and backend systems using React, Angular, and Spring Boot. Focused on performance, reliability, and clean system design.
+      </p>
        <div className="links">
-      <a href="https://linkedin.com/in/vamshi-j"><FaLinkedinIn style={{ fontSize: '30px', color: '#0077B5' ,alignItems:'center'}} /></a>
-     <a href="https://github.com/jamalpurvamshi12" style={{ marginLeft: '20px' }}><FaGithub style={{ fontSize: '30px', color: '#000',alignItems:'center'}} /></a>
-     <a href="mailto:vamshivj12@gmail.com" style={{ marginLeft: '10px' }}><FaEnvelope style={{ fontSize: '30px', color: '#000',alignItems:'center'}} /></a> 
+      <a href="https://www.linkedin.com/in/vam3457/"><FaLinkedinIn style={{ fontSize: '30px', color: '#0077B5' ,alignItems:'center'}} /></a>
+     <a href="https://github.com/epickost" style={{ marginLeft: '20px' }}><FaGithub style={{ fontSize: '30px', color: '#000',alignItems:'center'}} /></a>
+     <a href="mailto:vamshiub2022@gmail.com" style={{ marginLeft: '10px' }}><FaEnvelope style={{ fontSize: '30px', color: '#000',alignItems:'center'}} /></a> 
    </div>
 
        </div>

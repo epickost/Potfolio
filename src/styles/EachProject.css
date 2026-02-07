@@ -59,3 +59,411 @@ p {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+
+/* ✅ Whole page layout */
+.project-page {
+  width: 100%;
+  padding: 40px 0 70px;
+  background: #ffffff;
+}
+
+/* ✅ card container */
+.project-shell {
+  width: min(1050px, 92%);
+  margin: 0 auto;
+  background: #0b0b0b;
+  color: #fff;
+  border-radius: 28px;
+  padding: 26px 26px 30px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+/* ✅ header row */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.project-title {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 800;
+}
+
+/* ✅ github button */
+.project-github {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.10);
+  color: #fff;
+  text-decoration: none;
+  transition: transform 200ms ease, background 200ms ease;
+  font-size: 24px;
+}
+
+.project-github:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.18);
+}
+
+/* ✅ image */
+.project-imageWrap {
+  width: 100%;
+  margin: 10px 0 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: #111;
+}
+
+.project-image {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ✅ markdown container */
+.project-markdown {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 18px;
+  padding: 18px 18px;
+}
+
+/* =========================
+   ✅ Markdown styling
+========================= */
+
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+  margin: 16px 0 10px;
+  line-height: 1.25;
+}
+
+.markdown h1 { font-size: 22px; }
+.markdown h2 { font-size: 20px; }
+.markdown h3 { font-size: 17px; }
+
+.markdown p {
+  margin: 10px 0;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.7;
+  font-size: 14.5px;
+}
+
+.markdown ul,
+.markdown ol {
+  margin: 10px 0 10px 20px;
+}
+
+.markdown li {
+  margin: 6px 0;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.6;
+  font-size: 14.5px;
+}
+
+.markdown strong {
+  color: #fff;
+}
+
+.markdown code {
+  background: rgba(0,0,0,0.35);
+  padding: 2px 6px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.markdown hr {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  margin: 18px 0;
+}
+
+/* ✅ mobile */
+@media (max-width: 960px) {
+  .project-shell {
+    padding: 18px 16px 22px;
+    border-radius: 22px;
+  }
+  .project-title {
+    font-size: 26px;
+  }
+  .project-image {
+    max-height: 280px;
+  }
+}
+
+/* =========================
+   FIX: Markdown headings color + size
+========================= */
+
+/* Force ALL markdown headings to be visible */
+.project-markdown h1,
+.project-markdown h2,
+.project-markdown h3,
+.project-markdown h4 {
+  color: #ffffff !important;
+}
+
+/* Make section titles look like h4 */
+.project-markdown h1,
+.project-markdown h2,
+.project-markdown h3 {
+  font-size: 16px;        /* h4 size */
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  margin: 20px 0 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
+/* Keep body text clean */
+.project-markdown p,
+.project-markdown li {
+  color: rgba(255,255,255,0.88);
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+
+/* Optional: bullets spacing */
+.project-markdown ul {
+  padding-left: 20px;
+}
+
+/* =========================
+   PROJECT DETAILS – DARK MODE READABILITY
+========================= */
+
+/* Make EVERYTHING readable on dark bg */
+.project-markdown {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* Treat normal text like h4 */
+.project-markdown p,
+.project-markdown li {
+  font-size: 16px;          /* h4 size */
+  line-height: 1.8;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Section titles (Overview, Features, etc.) */
+.project-markdown h1,
+.project-markdown h2,
+.project-markdown h3 {
+  font-size: 17px;          /* slightly stronger than body */
+  font-weight: 600;
+  margin: 28px 0 12px;
+  padding-bottom: 6px;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
+/* Optional: soften numbered lists */
+.project-markdown ol {
+  padding-left: 22px;
+}
+
+/* Bullet spacing */
+.project-markdown ul {
+  padding-left: 22px;
+  margin-top: 8px;
+}
+
+/* Code blocks if any */
+.project-markdown code {
+  background: rgba(255,255,255,0.08);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ============================= */
+/* ✅ NEW: lock page to viewport  */
+/* ============================= */
+.project-page {
+  height: 100vh;
+  overflow: hidden; /* IMPORTANT: stops body/page scrolling */
+  background: #fff; /* optional */
+}
+
+/* ================================================ */
+/* ✅ NEW: card/container is fixed height like screen */
+/* ================================================ */
+.project-shell {
+  height: 100vh;               /* IMPORTANT: same as screen */
+  width: 95%;
+  margin: 0 auto;
+  background: #000;
+  color: #fff;
+  border-radius: 30px;
+  box-shadow: 5px 5px 5px 5px rgb(148, 141, 141);
+
+  display: flex;               /* IMPORTANT: lets markdown take remaining space */
+  flex-direction: column;
+  overflow: hidden;            /* IMPORTANT: keeps scroll inside */
+}
+
+/* ============================== */
+/* ✅ Header stays visible         */
+/* ============================== */
+.project-header {
+  position: sticky;            /* header stays at top while scrolling inside */
+  top: 0;
+  z-index: 10;
+  padding: 18px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(6px);
+}
+
+/* GitHub icon */
+.project-github {
+  position: absolute;
+  right: 28px;
+  color: #fff;
+  font-size: 28px;
+}
+
+/* ============================== */
+/* ✅ Image area (NOT scrollable) */
+/* ============================== */
+.project-imageWrap {
+  padding: 10px 20px 0 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.project-image {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 18px;
+  display: block;
+}
+
+/* ================================================= */
+/* ✅ KEY FIX: only markdown scrolls inside the card  */
+/* ================================================= */
+.project-markdown {
+  flex: 1;                     /* IMPORTANT: takes remaining height */
+  overflow-y: auto;            /* IMPORTANT: scroll happens here */
+  padding: 18px 22px 30px 22px;
+}
+
+/* --------------------------------------- */
+/* ✅ Since you're NOT using project-markdown div
+   (you render ReactMarkdown directly),
+   target markdown output inside project-shell */
+/* --------------------------------------- */
+.project-shell > .react-markdown,
+.project-shell > article,
+.project-shell > div:last-child {
+  /* fallback if you later wrap it */
+}
+
+/* ✅ Make markdown text readable on black */
+.project-shell h4 {
+  color: #f2f2f2;
+  font-weight: 500;
+  line-height: 1.55;
+  margin: 8px 0;
+}
+
+/* ✅ Fix headings that became black */
+.project-shell h1,
+.project-shell h2,
+.project-shell h3,
+.project-shell h5,
+.project-shell h6 {
+  color: #fff !important;
+}
+
+/* Lists spacing */
+.project-shell ul,
+.project-shell ol {
+  padding-left: 26px;
+  margin: 10px 0;
+}
+
+/* Optional: nicer scrollbar */
+.project-shell::-webkit-scrollbar,
+.project-markdown::-webkit-scrollbar {
+  width: 10px;
+}
+.project-shell::-webkit-scrollbar-thumb,
+.project-markdown::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+}
+
+/* ===== Subsection headings underline ===== */
+
+/* bold text inside markdown (used as subsection titles) */
+.project-markdown h4 strong {
+  display: inline-block;
+  padding-bottom: 4px;
+  margin-bottom: 6px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+/* spacing so content doesn't stick */
+.project-markdown h4 {
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* ===== Underline subsection headings ===== */
+.project-markdown h4 {
+  color: #ffffff;
+  line-height: 1.7;
+  margin: 18px 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.55);
+}
+
+/* optional: tighter list spacing */
+.project-markdown h4 + ul,
+.project-markdown h4 + ol {
+  margin-top: 10px;
+}
+
+/* ✅ Fix dark/bold text inside bullets */
+.project-markdown li,
+.project-markdown li * {
+  color: #e6e6e6;
+}
+
+/* ✅ specifically make bold text readable */
+.project-markdown strong,
+.project-markdown b {
+  color: #ffffff;
+  font-weight: 700;
+} 

@@ -215,29 +215,56 @@ The project successfully integrated a Random Forest model for predicting diabete
 ]
 export const experiences = [
   {
+  bgcolor: "white",
+  company: "S2Global Solutions",
+  role: "Software Engineer",
+  img: "https://www.s2globalsolutions.com/assets/images/logonew.png",
+  date: "Jul 2024 – Present",
+  clients: [
+    {
+      name: "Fiserv",
+      description: `
+• Standardized fraud validation across Spring Boot APIs and Spring Batch layers, improving reporting accuracy across 5 payment networks.
+• Enhanced Dispute Service APIs and Angular UI, enabling faster investigation for 500K+ disputes per month.
+• Implemented in-memory caching for exception responses, reducing request latency by 15%.
+• Built a Python + Streamlit tool to generate validated batch files, cutting setup time from hours to seconds.
+      `
+    },
+    {
+      name: "Barclays",
+      description: `
+• Developed audit-logging REST APIs for a centralized Security Service across Hadoop platforms.
+• Built an event-driven support triage system using Java, Kafka, and LLM-based AI, processing 10K+ messages/day.
+• Redesigned Ambari UI using HTML, CSS, and JavaScript to improve cluster management usability.
+• Improved CI/CD pipelines and containerized services using Docker and Kubernetes.
+      `
+    }
+  ]
+},
+  {
     bgcolor:"black",
     id: 0,
     img: "data:image/jpeg;base64,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",
-    role: "Full Stack Developer",
+    role: "Associate Software Engineer",
     company: "Legato Health Technologies",
-    date: "Sep 2021- May 2022",
-    description: ` Contributed to React UI development, boosting user engagement by 15% and streamlining agent and agency setup for
-Licensing & Credentialing and Sales Compensation in the application.
-Implemented resilient Spring Boot services, achieving a 25% improvement in data processing efficiency and ensuring
-regulatory compliance at the core, supporting agent management and compensation processes.
- `
+    date: "Nov 2021- May 2022",
+    description: `
+    • Developed a secure and scalable Agent Account Service using Spring Boot, REST APIs, and MySQL to manage agent account creation and updates.
+    • Integrated Redis caching with TTL-based policies to optimize high-frequency account lookups, reducing database load and improving API response times by 12%.
+    • Deployed backend services on AWS (EC2, S3, RDS) using GitHub Actions and configured CloudWatch monitoring and alerts for production reliability.
+    `
   },
   {
     bgcolor:"orange",
     id: 0,
     img: "data:image/png;base64,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",
-    role: "Software Developer",
+    role: "Software Engineer",
     company: "Phygital24",
-    date: "Aug 2020 - Aug 2021",
+    date: "Dec 2020 - Aug 2021",
     description: `
-      Designed Revamped UI for a React e-commerce app, boosting user engagement by 15%. 
-      Integrated 200+ components,optimizing data upload and enhancing app functionality through strategic state management.
-     Contributed significantly to the development of both producer and consumer applications in an e-commerce platform,working with a microservices architecture that resulted in a remarkable 30% improvement in scalability andmaintainability.
+• Built product listing and creation workflows using React with structured state management and validation, integrated with Java APIs and MongoDB to support 1,000+ daily users.
+• Integrated 10+ GraphQL APIs across Producer and Consumer platform modules, optimizing data fetching through schema-driven queries and client-side validation.
+• Designed and implemented a producer-controlled store availability feature, enforcing order placement rules across 150+ stores based on real-time availability.
 `
   },
 ];

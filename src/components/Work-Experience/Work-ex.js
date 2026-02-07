@@ -5,16 +5,70 @@ import "../../styles/Experiences.css";
 const WorkExp=()=>
 {
   return <div className="div_work">
-             <h1 style={{color:"black"}} >Here comes work-ex</h1>
+             <h1 style={{color:"black"}} >Work-Experience</h1>
            {experiences.map((item,index) => 
                <div key={index} className="all_items" style={{backgroundColor:"black"}}>
                <div className="work_ex_items">
-                <div><img src={(item.img)} alt="work-exp" height={195} width={195}/> </div>
+                {/* <div><img src={(item.img)} alt="work-exp" height={195} width={195}/> </div> */}
+                <div>
+                {item.company === "S2Global Solutions" ? (
+                  <img src={item.img} alt="work-exp" className="company-logo s2-logo float-logo" />
+                ) : (
+                  <img src={item.img} alt="work-exp" height={195} width={195} className="float-logo" />
+                )}
+              </div>
                 <div className="work_ex_details">
                  <div><h1 style={{color:"white"}}>{item.company}</h1></div>
                  <div><h2>{item.role}</h2></div>
                  <div ><h3 className="exp-h3">{item.date}</h3></div>
-                 <div className="job-jd"><h4>{item.description}</h4></div>
+                 {/* <div className="job-jd"><h4>{item.description}</h4></div> */}
+                  {/* <div className="job-jd">
+                  {item.description
+                    .trim()
+                    .split("\n")
+                    .filter(Boolean)
+                    .map((line, i) => (
+                      <h4 key={i}>
+                        {line.replace("•", "").trim()}
+                      </h4>
+                    ))}
+                </div> */}
+                   <div className="job-jd">
+                  {/* CASE 1: S2Global with clients */}
+                  {item.clients && item.clients.map((client, cIdx) => (
+                    <div key={cIdx} style={{ marginBottom: "18px" }}>
+                      <h3 style={{ color: "white", fontWeight: 600 }}>
+                        Client: {client.name}
+                      </h3>
+
+                      {client.description
+                        .trim()
+                        .split("\n")
+                        .filter(Boolean)
+                        .map((line, i) => (
+                          <div key={i} style={{ display: "flex", gap: "10px" }}>
+                            <span>•</span>
+                            <h4>{line.replace("•", "").trim()}</h4>
+                          </div>
+                        ))}
+                    </div>
+                  ))}
+
+                  {/* CASE 2: Normal experience (Legato / Phygital) */}
+                  {!item.clients && item.description && (
+                    item.description
+                      .trim()
+                      .split("\n")
+                      .filter(Boolean)
+                      .map((line, i) => (
+                        <div key={i} style={{ display: "flex", gap: "10px" }}>
+                          <span>•</span>
+                          <h4>{line.replace("•", "").trim()}</h4>
+                        </div>
+                      ))
+                  )}
+
+                </div>
                </div>
                </div>
               </div>
