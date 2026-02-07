@@ -467,3 +467,29 @@ p {
   color: #ffffff;
   font-weight: 700;
 } 
+
+
+
+/* ✅ ONLY markdown headings get underline */
+.project-markdown .md-heading {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 2px;
+  margin: 18px 0 10px;
+}
+
+/* ✅ Normal text should NOT have underline / border */
+.project-markdown .md-text {
+  color: #eaeaea;
+  font-weight: 400;
+  text-decoration: none;
+  border: none;
+  margin: 8px 0;
+}
+
+/* Optional: list indent */
+.project-markdown .md-li {
+  padding-left: 18px;
+}

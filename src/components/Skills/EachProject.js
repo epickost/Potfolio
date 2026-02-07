@@ -48,19 +48,37 @@ const EachProject = () => {
               </div>
             )}
 
-            <ReactMarkdown
+            {/* <ReactMarkdown
               components={{
-                h1: ({ node, ...props }) => <h4 {...props} />,
-                h2: ({ node, ...props }) => <h4 {...props} />,
-                h3: ({ node, ...props }) => <h4 {...props} />,
-                h4: ({ node, ...props }) => <h4 {...props} />,
-                h5: ({ node, ...props }) => <h4 {...props} />,
-                h6: ({ node, ...props }) => <h4 {...props} />,
-                
+                h1: ({ children }) => <h4 className="md-h" >{children}</h4>,
+                h2: ({ children }) => <h4 className="md-h" >{children}</h4>,
+                h3: ({ children }) => <h4 className="md-h" >{children}</h4>,
+                h4: ({ children }) => <h4 className="md-h" >{children}</h4>,
+                h5: ({ children }) => <h4 className="md-h" >{children}</h4>,
+                h6: ({ children }) => <h4 className="md-h" >{children}</h4>,
+                p:  ({ children }) => <h4 className="md-p" >{children}</h4>,
+                li: ({ children }) => <h4 className="md-li">{children}</h4>,
+                            
               }}
             >
               {item.Wholedescription}
-            </ReactMarkdown>
+            </ReactMarkdown> */}
+             
+                  <ReactMarkdown
+                components={{
+                  h1: ({ children }) => <h4 className="md-heading">{children}</h4>,
+                  h2: ({ children }) => <h4 className="md-heading">{children}</h4>,
+                  h3: ({ children }) => <h4 className="md-heading">{children}</h4>,
+                  h4: ({ children }) => <h4 className="md-heading">{children}</h4>,
+                  h5: ({ children }) => <h4 className="md-heading">{children}</h4>,
+                  h6: ({ children }) => <h4 className="md-heading">{children}</h4>,
+
+                  p:  ({ children }) => <h4 className="md-text">{children}</h4>,
+                  li: ({ children }) => <h4 className="md-text md-li">{children}</h4>,
+                }}
+              >
+                {item?.Wholedescription || ""}
+              </ReactMarkdown>
           </div>
         )}
       </div>
