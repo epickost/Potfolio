@@ -124,8 +124,13 @@ const WorkExp = () => {
 
             {/* Details */}
             <div className="work_ex_details">
-              <h1 style={{ color: "white" }}>{item.company}</h1>
-              <h2>{item.role}</h2>
+              {/* <h2 style={{ color: "white" }}>{item.company}</h2>
+              <h2>{item.role}</h2> */}
+              <h2 className="role-line">
+                <span className="role">{item.role}</span>
+                <span className="sep"> – </span>
+                <span className="company">{item.company}</span>
+              </h2>
               <h3 className="exp-h3">{item.date}</h3>
 
               <div className="job-jd">
