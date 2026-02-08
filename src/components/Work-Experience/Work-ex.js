@@ -86,9 +86,9 @@ import "../../styles/Experiences.css";
 
 const cleanLine = (s) =>
   s
-    .replace(/^["']|["']$/g, "") // remove wrapping quotes
-    .replace(/^•\s?/, "")        // remove leading bullet if present
-    .replace(/\r/g, "")          // remove windows CR
+    .replace(/\r/g, "")
+    .replace(/^["']|["']$/g, "") // remove wrapping quotes first
+    .replace(/^[\s\u00A0]*([•·▪▫◦‣\-–]\s*)+/g, "") // remove 1+ bullets/dashes after spaces/nbsp
     .trim();
 
 const WorkExp = () => {

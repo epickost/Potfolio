@@ -24,11 +24,11 @@ const ProjectSkills = (item) =>
 
     <div ref={ref}  onClick={() => ProjectSkills(item)} className={`skills_details ${inView ? (index % 2 === 0 ? "skill_l_r" : "skill_r_l") : ""}`}>
       <div>
-        <h1>{item.projectname}</h1>
+        <h2 style={{ color: 'black' }}>{item.projectname}</h2>
       </div>
       <div className="All_Skills">
         <div className="skills_section">
-          <h2 style={{ color: 'black' }}>{item.description}</h2>
+          <h2 style={{ color: 'white' }}>{item.description}</h2>
         </div>
       </div>
     </div>);
