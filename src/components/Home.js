@@ -1,6 +1,7 @@
 
 import React from "react";
 import HeroSection from "./HeroSection/Index";
+import TechStack from "./Tech-Stack/Index";
 import WorkExp from "./Work-Experience/Work-ex";
 import Skills from "./Skills/Index";
 import styled from "styled-components";
@@ -9,7 +10,7 @@ import Navbar from "./Navbar/Index";
 const Body=styled.div`
    width: 100%;
    color: white;
-   overflow-x:hdden;
+   overflow-x: hidden;
 `;
 
 const Home = () => {
@@ -18,6 +19,9 @@ const Home = () => {
         <Navbar />
         <Body>
           <HeroSection />
+          <section id="about-skills">
+            <TechStack />
+          </section>
           <section id="workexp">
           <WorkExp />
          </section>

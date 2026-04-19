@@ -1,0 +1,148 @@
+@import "../App.css";
+
+.tech-stack-shell {
+  width: min(1180px, 94%);
+  margin: 32px auto 10px;
+  padding: 26px 0 10px;
+}
+
+.tech-stack-heading {
+  max-width: 760px;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+.tech-stack-kicker {
+  margin: 0 0 8px;
+  color: #f36f21;
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.tech-stack-heading h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+}
+
+.tech-stack-intro {
+  margin: 14px auto 0;
+  max-width: 700px;
+  color: #3b3b3b;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.tech-stack-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.tech-stack-group {
+  padding: 24px;
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at top right, rgba(243, 111, 33, 0.1), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #f7f4ef 100%);
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.07);
+}
+
+.tech-stack-group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.tech-stack-group-header h2 {
+  margin: 0;
+  color: #111;
+  font-size: 1.4rem;
+}
+
+.tech-stack-group-header p {
+  margin: 0;
+  max-width: 440px;
+  color: #505050;
+  text-align: right;
+  line-height: 1.6;
+}
+
+.tech-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 14px;
+}
+
+.tech-skill-card {
+  min-height: 120px;
+  padding: 18px 14px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(17, 17, 17, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.tech-skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.1);
+}
+
+.tech-skill-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.tech-skill-name {
+  color: #111;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+@media screen and (max-width: 960px) {
+  .tech-stack-shell {
+    width: 92%;
+    margin-top: 18px;
+  }
+
+  .tech-stack-group {
+    padding: 20px 16px;
+  }
+
+  .tech-stack-group-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tech-stack-group-header p {
+    text-align: left;
+  }
+
+  .tech-stack-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .tech-stack-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .tech-skill-card {
+    min-height: 108px;
+    padding: 16px 10px;
+  }
+}

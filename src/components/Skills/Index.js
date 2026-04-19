@@ -1,35 +1,44 @@
-import {React} from "react";
-import {web_projects} from "../../data/constant";
+import { React } from "react";
+import { FaGithub } from "react-icons/fa";
+import { web_projects } from "../../data/constant";
 import "../../styles/Skills.css";
 import { useInView } from 'react-intersection-observer';
- import { useNavigate } from 'react-router-dom';
 
 const Skills = () => {
-
-  const navigate = useNavigate();
   const SkillCard = ({ item, index }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2, 
   });
 
-
-const ProjectSkills = (item) => 
-{
-      navigate('/each-project', { state: { item } });
-};
-
-
   return (
-
-    <div ref={ref}  onClick={() => ProjectSkills(item)} className={`skills_details ${inView ? (index % 2 === 0 ? "skill_l_r" : "skill_r_l") : ""}`}>
+    <div
+      ref={ref}
+      className={`skills_details ${inView ? (index % 2 === 0 ? "skill_l_r" : "skill_r_l") : ""}`}
+    >
       <div>
-        <h2 style={{ color: 'black' }}>{item.projectname}</h2>
+        <h2 className="project-title">{item.projectname}</h2>
       </div>
       <div className="All_Skills">
         <div className="skills_section">
           <h2 style={{ color: 'white' }}>{item.description}</h2>
         </div>
+      </div>
+      <div className="project-hover-card">
+        <p className="project-hover-summary">{item.summary || item.description}</p>
+        {item.gitlink && (
+          <a
+            className="project-hover-link"
+            href={item.gitlink}
+            target="_blank"
+            rel="noreferrer"
+            onClick={(event) => event.stopPropagation()}
+            aria-label={`${item.projectname} GitHub repository`}
+          >
+            <FaGithub />
+            <span>GitHub</span>
+          </a>
+        )}
       </div>
     </div>);
 };
@@ -48,6 +57,4 @@ const ProjectSkills = (item) =>
 }
 
 export default Skills;
-
-
 

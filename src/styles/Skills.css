@@ -38,6 +38,7 @@
 .skills_details
 {
   position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,6 +52,7 @@
   margin: 15px;
   top: 0;
   transition: top ease 0.3s;
+  cursor: default;
   /* box-shadow: 5px 5px 5px 5px rgb(148, 141, 141);   */
   /* box-shadow: 10px 10px rgb(216 214 214 / 22%); */
   /* box-shadow: 5px 5px 5px 5px rgb(148, 141, 141); */
@@ -74,6 +76,16 @@
    /* border: 0.02px solid white; */
    border: none;
    box-shadow: 5px 5px 5px 5px rgb(148, 141, 141);  
+}
+
+.project-title {
+  color: #000;
+  transition: color 220ms ease;
+}
+
+.skills_details:hover .project-title,
+.skills_details:focus-within .project-title {
+  color: #fff;
 }
 .All_Skills
 {
@@ -147,3 +159,67 @@
 
 
 /* -------- */
+
+.project-hover-card {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 14px;
+  padding: 26px;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.08) 0%, rgba(10, 10, 10, 0.9) 58%, rgba(10, 10, 10, 0.96) 100%);
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 220ms ease, transform 220ms ease;
+  pointer-events: none;
+}
+
+.skills_details:hover .project-hover-card,
+.skills_details:focus-within .project-hover-card {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.project-hover-summary {
+  margin: 0;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.project-hover-link {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #fff;
+  color: #111;
+  text-decoration: none;
+  font-weight: 700;
+  pointer-events: auto;
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.project-hover-link:hover {
+  transform: translateY(-2px);
+  background: #f0f0f0;
+}
+
+@media screen and (max-width:960px) {
+  .project-hover-card {
+    opacity: 1;
+    transform: none;
+    justify-content: flex-end;
+    padding: 20px;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.02) 0%, rgba(10, 10, 10, 0.84) 68%, rgba(10, 10, 10, 0.94) 100%);
+  }
+
+  .project-hover-summary {
+    font-size: 0.95rem;
+  }
+}

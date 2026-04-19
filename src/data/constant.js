@@ -1,6 +1,8 @@
 
 import youro3 from '../assets/Projectpics/youro-3.jpg';
 import sales from '../assets/Projectpics/sales.jpg';
+import fiservLogo from "../assets/Company-Logos/Fiserv.png";
+import barclaysLogo from "../assets/Company-Logos/Barclays.png";
  
 
 
@@ -10,6 +12,7 @@ export const web_projects= [
       gitlink:'https://github.com/sricharan18/youro-frontend',
       imglink1:youro3,
       description:"A TeleHealth platform",
+      summary:"Telehealth platform for appointments, secure chat, and personalized care planning. Built with Spring Boot, React, and MySQL.",
      Wholedescription: `
 The telehealth platform is a sophisticated system designed to provide comprehensive virtual healthcare services. It leverages Spring Boot to power robust RESTful APIs, ensuring a reliable and scalable backend infrastructure. The integration with MySQL allows for efficient database management, with JPA (Java Persistence API) used for handling complex entity relationships, ensuring data consistency and integrity.
 
@@ -60,6 +63,7 @@ Overall, this telehealth platform represents a significant advancement in virtua
      description:"Predictive Sales Tool",
      gitlink:'https://github.com/jamalpurvamshi12/Prediction-of-Sales/tree/master',
      imglink1:sales,
+     summary:"Sales forecasting tool for retail inventory planning using machine learning and Streamlit. Helps improve stock decisions and profitability.",
      Wholedescription: `
 
 ### Problem Statement
@@ -137,6 +141,7 @@ Our predictive model, particularly the Random Forest algorithm, provides valuabl
    {
     projectname:"Blood Bank Management System",
     description:"A database managment solution ",
+    summary:"Blood bank and hospital management system focused on inventory, requests, and traceability. Built with PostgreSQL, React, HTML, and CSS.",
     Wholedescription: `
 ## Overview
 The Blood Bank Management System is a comprehensive solution designed to facilitate efficient communication and management between hospitals and the blood bank. It leverages PostgreSQL for robust database management, ensuring seamless operations and enhanced traceability in the blood supply chain.
@@ -187,6 +192,7 @@ The Blood Bank Management System provides a robust platform for efficient blood 
    {
      projectname:"Prediction of Diabetes",
      description:"Diabetes Predictor Web App",
+     summary:"Web app that predicts diabetes risk from health inputs using Random Forest. Combines a Flask backend with an HTML, CSS, and JavaScript frontend.",
      Wholedescription: `
 
 ### Overview
@@ -216,30 +222,42 @@ The project successfully integrated a Random Forest model for predicting diabete
 export const experiences = [
   {
   bgcolor: "white",
-  company: "S2Global Solutions",
+  company: "Fiserv",
   role: "Software Engineer",
-  img: "https://www.s2globalsolutions.com/assets/images/logonew.png",
-  date: "Jul 2024 – Present",
-  clients: [
-    {
-      name: "Fiserv",
-      description: `
+  img: fiservLogo,
+  date: "Mar 2025 - Present",
+  latest: true,
+  projects: [
+    "Marketplace",
+    "Dispute Service APIs",
+    "Alternate Payment Methods",
+    "Dispute Settlements",
+  ],
+  description: `
 • Standardized fraud validation across Spring Boot APIs and Spring Batch layers, improving reporting accuracy across 5 payment networks.
 • Enhanced Dispute Service APIs and Angular UI, enabling faster investigation for 500K+ disputes per month.
 • Implemented in-memory caching for exception responses, reducing request latency by 15%.
 • Built a Python + Streamlit tool to generate validated batch files, cutting setup time from hours to seconds.
-      `
-    },
-    {
-      name: "Barclays",
-      description: `
+  `
+},
+  {
+  bgcolor: "white",
+  company: "Barclays",
+  role: "Software Engineer",
+  img: barclaysLogo,
+  date: "Jul 2024 - Feb 2025",
+  projects: [
+    "Security Service APIs",
+    "Support Triage System",
+    "Ambari UI Redesign",
+    "CI/CD Modernization",
+  ],
+  description: `
 • Developed audit-logging REST APIs for a centralized Security Service across Hadoop platforms.
 • Built an event-driven support triage system using Java, Kafka, and LLM-based AI, processing 10K+ messages/day.
 • Redesigned Ambari UI using HTML, CSS, and JavaScript to improve cluster management usability.
 • Improved CI/CD pipelines and containerized services using Docker and Kubernetes.
-      `
-    }
-  ]
+  `
 },
   {
     bgcolor:"black",
@@ -247,7 +265,12 @@ export const experiences = [
     img: "data:image/jpeg;base64,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",
     role: "Associate Software Engineer",
     company: "Legato Health Technologies",
-    date: "Nov 2021- May 2022",
+    date: "Nov 2021 - May 2022",
+    projects: [
+      "Agent Account Service",
+      "Redis Caching Layer",
+      "AWS Deployment Pipeline",
+    ],
     description: `
     • Developed a secure and scalable Agent Account Service using Spring Boot, REST APIs, and MySQL to manage agent account creation and updates.
     • Integrated Redis caching with TTL-based policies to optimize high-frequency account lookups, reducing database load and improving API response times by 12%.
@@ -261,6 +284,11 @@ export const experiences = [
     role: "Software Engineer",
     company: "Phygital24",
     date: "Dec 2020 - Aug 2021",
+    projects: [
+      "Product Listing Workflows",
+      "GraphQL Platform Integrations",
+      "Store Availability Engine",
+    ],
     description: `
 • Built product listing and creation workflows using React with structured state management and validation, integrated with Java APIs and MongoDB to support 1,000+ daily users.
 • Integrated 10+ GraphQL APIs across Producer and Consumer platform modules, optimizing data fetching through schema-driven queries and client-side validation.

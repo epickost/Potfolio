@@ -14,7 +14,7 @@ const Navbar=()=>
   return <div className="nav">
           <div className="nav_container">
           <div className="nav_items">
-          <a className="nav_links" href={'/about'}>About</a>
+          <a className="nav_links" href={"#about-skills"}>About</a>
           <a className="nav_links" href={"#workexp"}>Experience</a>
           <a className="nav_links" href={"#skills"}>Projects</a>
           </div>
@@ -23,7 +23,7 @@ const Navbar=()=>
           </div>
           {open===true ?
              (<div className="nav_mob_items">
-               <a className="nav_mob_links" onClick={mobile_hamburger} href={'/about'}>About</a>
+               <a className="nav_mob_links" onClick={mobile_hamburger} href={"#about-skills"}>About</a>
                <a className="nav_mob_links" onClick={mobile_hamburger} href={"#workexp"}>Experience</a>
                <a className="nav_mob_links" onClick={mobile_hamburger} href={"#skills"}>Projects</a>
            </div>): <div/>}

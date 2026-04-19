@@ -5,11 +5,11 @@
 {
   display: flex;
   align-items: center;
-  height: 90vh;
+  min-height: calc(100vh - 72px);
   justify-content: center;
    @media screen and (max-width: 960px)
   {
-    height: 90vh;
+    min-height: auto;
   }
 }
 .hero_container
@@ -28,6 +28,8 @@
    flex-direction: row;
    justify-content: space-around;
    align-items: center;
+   gap: 34px;
+   width: min(1440px, 100%);
   @media screen and (max-width: 960px)
   {
     padding: 80px 20px;	 
@@ -76,11 +78,13 @@
 }
 .hero_intro
 {
-  padding-top: 20px;
+  padding-top: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 1.2rem;
+  gap: 16px;
+  flex: 1;
   @media screen and (max-width: 960px)
   {
     padding: 10px;
@@ -91,6 +95,45 @@
     padding: 10px;
   }
   
+}
+
+.hero-stats {
+  width: min(760px, 100%);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.hero-stat-card {
+  padding: 16px 14px;
+  border-radius: 20px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(247, 245, 238, 0.96) 100%);
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 6px;
+  text-align: left;
+  min-height: 118px;
+}
+
+.hero-stat-value {
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 800;
+  color: #111;
+  letter-spacing: -0.04em;
+}
+
+.hero-stat-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #f36f21;
 }
 
  .hero_img 
@@ -104,12 +147,14 @@
 .video-mp4
 {
    display: flex;
-   height: 50%;
-   width: 80%;
+   width: 100%;
+   max-width: 620px;
+   height: clamp(420px, 58vh, 640px);
+   object-fit: cover;
   box-shadow: 4px 4px 4px 4px rgb(148, 141, 141); 
     @media screen  and (max-width:960px)
  {
-    height: 700px;
+    height: 420px;
     width: 100%;
     object-fit: cover;
   }
@@ -118,6 +163,7 @@
 .vid
 {
   margin: 2%;
+  width: min(42vw, 620px);
 }
 .hero_img img
 {
@@ -148,4 +194,28 @@ p
 {
   color: black;
   font-weight: 500;
+}
+
+@media screen and (max-width: 960px) {
+  .hero-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-stat-card {
+    padding: 16px 18px;
+  }
+
+  .hero-stat-value {
+    font-size: 1.8rem;
+  }
+
+  .vid {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .hero-stats {
+    grid-template-columns: 1fr;
+  }
 }
